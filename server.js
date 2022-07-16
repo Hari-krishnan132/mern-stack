@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging')
   });
  }
 
-const uri = "mongodb+srv://dbUser:dbPassword@cluster1.d4ycx.mongodb.net/?retryWrites=true&w=majority"
+const uri = "mongodb+srv://dbUser:dbPassword@cluster1.d4ycx.mongodb.net/?retryWrites=true&w=majority";
 
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true });
 
