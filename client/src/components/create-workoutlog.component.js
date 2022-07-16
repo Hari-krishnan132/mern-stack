@@ -24,7 +24,7 @@ export default class CreateWorkoutLog extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/users/')
+    axios.get('/api/users/')
     .then(response => {
       if (response.data.length > 0) {
         this.setState({
@@ -37,7 +37,7 @@ export default class CreateWorkoutLog extends Component {
       console.log(error);
     })
 
-    axios.get('http://localhost:5000/routines/')
+    axios.get('/api/routines/')
     .then(response => {
       if (response.data.length > 0) {
         this.setState({
