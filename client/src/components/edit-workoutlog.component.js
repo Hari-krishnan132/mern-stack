@@ -24,7 +24,7 @@ export default class EditeWorkoutLog extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/workoutlogs/'+this.props.match.params.id)
+    axios.get('/api/workoutlogs/'+this.props.match.params.id)
     .then(response => {
       this.setState({
         workoutdate: new Date(response.data.workoutdate),
@@ -37,7 +37,7 @@ export default class EditeWorkoutLog extends Component {
       console.log(error);
     })
 
-    axios.get('http://localhost:5000/users/')
+    axios.get('/api/users/')
     .then(response => {
       if (response.data.length > 0) {
         this.setState({
