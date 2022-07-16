@@ -87,7 +87,7 @@ export default class CreateWorkoutLog extends Component {
   
     console.log(workoutlog);
 
-    axios.post('http://localhost:5000/workoutlogs/add', workoutlog)
+    axios.post('/api/workoutlogs/add', workoutlog)
     .then(res => console.log(res.data));
 
     window.location = '/workout';
