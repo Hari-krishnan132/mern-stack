@@ -23,7 +23,7 @@ export default class EditExercise extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/exercises/'+this.props.match.params.id)
+    axios.get('/api/exercises/'+this.props.match.params.id)
       .then(response => {
         this.setState({
           exercisename: response.data.exercisename,
@@ -33,7 +33,7 @@ export default class EditExercise extends Component {
           progressionId: response.data.progressionId,
           userId: response.data.userId
         })
-        return axios.get('http://localhost:5000/users/'+response.data.userId);
+        return axios.get('/api/users/'+response.data.userId);
       })
       .then(response => {
         this.setState({
