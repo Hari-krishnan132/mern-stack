@@ -12,7 +12,7 @@ export default class ViewUser extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/users/'+this.props.match.params.id)
+    axios.get('/api/users/'+this.props.match.params.id)
       .then(response => {
         this.setState({
           user: response.data,
@@ -30,7 +30,7 @@ export default class ViewUser extends Component {
   onDeleteUser(id) {
     var confirmation = window.confirm("Are you sure you want to delete " + this.state.user.username + " profile? \n\n Press 'Yes' to confirm or 'Cancel' to cancel.");
     if (confirmation === true) {
-      axios.delete('http://localhost:5000/users/'+id)
+      axios.delete('/api/users/'+id)
       }
       window.location = '/user/add';
     }
