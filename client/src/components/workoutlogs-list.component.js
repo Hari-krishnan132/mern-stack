@@ -24,7 +24,7 @@ export default class WorkoutLogList extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/workoutlogs/')
+    axios.get('/api/workoutlogs/')
       .then(response => {
         this.setState({ workoutlogs: response.data })
       })
@@ -34,7 +34,7 @@ export default class WorkoutLogList extends Component {
   }
 
   deleteWorkoutLog(id) {
-    axios.delete('http://localhost:5000/workoutlogs/'+id)
+    axios.delete('/api/workoutlogs/'+id)
       .then(response => { console.log(response.data)});
 
     this.setState({
