@@ -49,7 +49,7 @@ export default class CreateProgression extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/exercises/')
+    axios.get('/api/exercises/')
     .then(response => {
       if (response.data.length > 0) {
         this.setState({
@@ -127,7 +127,7 @@ export default class CreateProgression extends Component {
   
     console.log(progression);
 
-    axios.post('http://localhost:5000/progressions/add', progression)
+    axios.post('/api/progressions/add', progression)
       .then(res => console.log(res.data));
     
     //window.location = '/progression';
