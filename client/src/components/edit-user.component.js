@@ -192,7 +192,7 @@ export default class EditUser extends Component {
     console.log(user);
     console.log(this.props.match.params.id);
 
-    axios.post('http://localhost:5000/users/update/', this.props.match.params.id)
+    axios.post('/api/users/update/', this.props.match.params.id)
       .then(res => {console.log(res);});
 
     window.location = '/user/profile/'+this.props.match.params.id;
