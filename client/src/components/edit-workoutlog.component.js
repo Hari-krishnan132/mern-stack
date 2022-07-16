@@ -49,7 +49,7 @@ export default class EditeWorkoutLog extends Component {
       console.log(error);
     })
 
-    axios.get('http://localhost:5000/routines/')
+    axios.get('/api/routines/')
     .then(response => {
       if (response.data.length > 0) {
         this.setState({
@@ -98,7 +98,7 @@ export default class EditeWorkoutLog extends Component {
   
     console.log(workoutlog);
 
-    axios.post('http://localhost:5000/workoutlogs/update/' + this.props.match.params.id, workoutlog)
+    axios.post('/api/workoutlogs/update/' + this.props.match.params.id, workoutlog)
     .then(res => console.log(res.data)); 
     console.log('Workout Log Updated!');   
     
