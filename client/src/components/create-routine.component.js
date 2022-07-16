@@ -32,7 +32,7 @@ export default class CreateRoutine extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/exercises/')
+    axios.get('/api/exercises/')
       .then(response => {
         this.setState({ exercises: response.data })
       })
@@ -84,7 +84,7 @@ export default class CreateRoutine extends Component {
   
     console.log(routine);
 
-    axios.post('http://localhost:5000/routines/add', routine)
+    axios.post('/api/routines/add', routine)
       .then(res => console.log(res.data));
     
     window.location = '/';
