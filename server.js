@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging')
 
 const uri = "mongodb+srv://dbUser:dbPassword@cluster0.qnwij.mongodb.net/?retryWrites=true&w=majority";
 
-mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true });
+mongoose.connect(uri, { useNewUrlParser: true});
 
 const connection = mongoose.connection;
 connection.once('open', () => {
