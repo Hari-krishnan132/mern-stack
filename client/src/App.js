@@ -27,21 +27,21 @@ function App() {
     <div className="container">
     <Navbar />
     <br/>
-    <Route path="/api/" exact component={Home} />
-    <Route path="/api/workout" exact component={WorkoutLogList} />
-    <Route path="/api/workout/add" exact component={CreateWorkoutLog} />
-    <Route path="/api/workout/edit/:id" component={EditWorkoutLog} />
-    <Route path="/api/exercise" exact component={ExercisesList} />
+    <Route path="/" exact component={Home} />
+    <Route path="/workout" exact component={WorkoutLogList} />
+    <Route path="/workout/add" exact component={CreateWorkoutLog} />
+    <Route path="/workout/edit/:id" component={EditWorkoutLog} />
+    <Route path="/exercise" exact component={ExercisesList} />
     {/* <Route path="/routine/" component={RoutinesList} /> */}
-    <Route path="/api/routine/add" component={CreateRoutine} />
+    <Route path="/routine/add" component={CreateRoutine} />
     {/* <Route path="/routine/edit/:id" component={EditRoutine} /> */}
     {/* <Route path="/progression/" component={ProgressionList} /> */}
-    <Route path="/api/progression/add" component={CreateProgression} />
-    <Route path="/api/exercise/add" component={CreateExercise} />
-    <Route path="/api/exercise/edit/:id" component={EditExercise} />
-    <Route path="/api/user/add" component={CreateUser} />
-    <Route path="/api/user/profile/:id" component={ViewUser} />
-    <Route path="/api/user/edit/:id" component={EditUser} />
+    <Route path="/progression/add" component={CreateProgression} />
+    <Route path="/exercise/add" component={CreateExercise} />
+    <Route path="/exercise/edit/:id" component={EditExercise} />
+    <Route path="/user/add" component={CreateUser} />
+    <Route path="/user/profile/:id" component={ViewUser} />
+    <Route path="/user/edit/:id" component={EditUser} />
     </div>
   </Router>
   );
